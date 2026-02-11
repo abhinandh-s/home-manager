@@ -41,6 +41,23 @@
         "type": "github"
       }
     },
+    "nix-scripts": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1770821213,
+        "narHash": "sha256-7Ryjb15PSWomP/JmeZHW8h0pWZBPq/3irj+JdzCYMV4=",
+        "path": "/home/abhi/git/nix-scripts",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/abhi/git/nix-scripts",
+        "type": "path"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1769598131,
@@ -61,6 +78,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "nix-fonts": "nix-fonts",
+        "nix-scripts": "nix-scripts",
         "nixpkgs": "nixpkgs",
         "rust-overlay": "rust-overlay",
         "sops-nix": "sops-nix",

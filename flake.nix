@@ -20,18 +20,22 @@
       url = "github:oxalica/rust-overlay";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+      nix-scripts = {
+      url = "path:/home/abhi/git/nix-scripts";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ {
     nixpkgs,
     home-manager,
-    rust-overlay,
     ...
   }:
     let
       system = "x86_64-linux";
       overlays = [
       (import inputs.rust-overlay)
+      inputs.nix-scripts.overlays.default
       (final: prev: {
         unstable = import inputs.unstable-nixpkgs {
           inherit system;
