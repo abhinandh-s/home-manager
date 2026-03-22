@@ -1,0 +1,102 @@
+# -----------------------------------------------------------------
+# NAVIGATION (The Essentials)
+# -----------------------------------------------------------------
+def_key "k"
+  scroll_up
+def_key "j"
+  scroll_down
+def_key "h"
+  previous_column
+def_key "l"
+  next_column
+def_key "g"
+  move_home
+def_key "G"
+  move_end
+def_key "backspace"
+  previous_column
+
+# -----------------------------------------------------------------
+# VIEWS (Switching Screens)
+# -----------------------------------------------------------------
+def_key "1"
+  show_playlist
+def_key "2"
+  show_browser
+def_key "3"
+  show_search_engine
+def_key "4"
+  show_media_library
+def_key "5"
+  show_playlist_editor
+def_key "6"
+  show_tag_editor
+def_key "7"
+  show_outputs
+def_key "8"
+  show_visualizer
+def_key "9"
+  show_clock
+def_key "l"
+  show_lyrics
+
+# -----------------------------------------------------------------
+# PLAYBACK CONTROL
+# -----------------------------------------------------------------
+def_key "space"
+  pause
+def_key "s"
+  stop
+def_key "L"
+  next
+def_key "H"
+  previous
+def_key "f"
+  seek_forward
+def_key "b"
+  seek_backward
+def_key "]"
+  volume_up
+def_key "["
+  volume_down
+
+# -----------------------------------------------------------------
+# PLAYLIST & DATABASE MANAGEMENT
+# -----------------------------------------------------------------
+def_key "a"
+  add_item_to_playlist
+def_key "A"
+  toggle_add_mode
+def_key "d"
+  delete_playlist_items
+  delete_browser_items
+  delete_stored_playlist
+def_key "C"
+  clear_playlist
+def_key "u"
+  update_database
+def_key "r"
+  refetch_lyrics
+
+# -----------------------------------------------------------------
+# EDITING (Context Sensitive)
+# -----------------------------------------------------------------
+def_key "e"
+  edit_song
+  edit_library_tag
+  edit_library_album
+  edit_directory_name
+  edit_playlist_name
+  edit_lyrics
+
+# -----------------------------------------------------------------
+# MISC & SYSTEM
+# -----------------------------------------------------------------
+def_key "enter"
+  play_item
+  enter_directory
+  run_action
+def_key "q"
+  quit
+def_key "f1"
+  show_help

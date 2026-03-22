@@ -9,6 +9,7 @@
     ./secrets
     ./lib
     ./mod
+    ./syncthing.nix
     #    ./dev.nix
   ];
 
@@ -27,9 +28,9 @@
       sops
       age
       neovim
-    (slstatus.override {
-      conf = builtins.readFile ./dots/slstatus/config.h;
-    })
+   # (slstatus.override {
+   #   conf = builtins.readFile ./dots/slstatus/config.h;
+   # })
    
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
@@ -44,7 +45,8 @@
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
-    # ".screenrc".source = dotfiles/screenrc;
+    ".config/mpd/mpd.conf".source = ./dots/music/mpd/mpd.conf;
+    ".config/ncmpcpp/config".source = ./dots/music/ncmpcpp/config;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -61,6 +63,9 @@
     "\${xdg.configHome}/emacs/bin"
     ".cargo/bin"
   ];
+
+
+
 
   fonts.fontconfig.enable = true;
 

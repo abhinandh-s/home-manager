@@ -24,6 +24,11 @@
       url = "path:/home/abhi/git/nix-scripts";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    wasm-pack = {
+      url = "path:/home/abhi/projects/wasm-pack-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+      catppuccin.url = "github:abhinandh-s/catppuccin-nix";
   };
 
   outputs = inputs @ {
@@ -36,6 +41,7 @@
       overlays = [
       (import inputs.rust-overlay)
       inputs.nix-scripts.overlays.default
+      inputs.catppuccin.overlays.default
       (final: prev: {
         unstable = import inputs.unstable-nixpkgs {
           inherit system;

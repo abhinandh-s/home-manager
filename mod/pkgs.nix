@@ -1,13 +1,17 @@
-{ pkgs, ... }: let
+{ pkgs, inputs, ... }: let
 dev_pkgs = with pkgs; [
   unstable.tailwindcss_4
+  unstable.tailwindcss-language-server
   cargo-watch
   deno
   lua-language-server
   nixd
+  ripgrep
   trunk
   tmux
-  wasm-pack
+  # wasm-pack
+  inputs.wasm-pack.packages.${stdenv.hostPlatform.system}.default
+  binaryen # wasm-opt
 ];
 
 scrpits = with pkgs; [
@@ -17,6 +21,8 @@ scrpits = with pkgs; [
   (backup-encrypted.override { 
    compressionLevel = "9"; 
    })
+   compress
+   extract
 ];
 in  {
   home.optional.packages = {
@@ -27,15 +33,26 @@ in  {
         librewolf
         libreoffice-fresh
         evince
+        kdePackages.gwenview
         zoxide
         typst
 
-        fzf
+
+    btop
+        bat
+        bat-extras.batman
+        bat-extras.batdiff
+        bat-extras.batpipe
+        bat-extras.batwatch
+        bat-extras.batgrep
+
+            fzf
         zathura
 # unstable.krita
 # rnote
 # gimp-with-plugins
-# obs-studio
+        obs-studio
+        # kitty
         inkscape-with-extensions
         flameshot
     ] ++ dev_pkgs ++ scrpits;

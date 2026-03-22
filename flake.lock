@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "catppuccin": {
+      "locked": {
+        "lastModified": 1771569734,
+        "narHash": "sha256-ZuaDyo2S9WnJMuDa8tRZr64djCVz5RL1k7WLdVTghHA=",
+        "owner": "abhinandh-s",
+        "repo": "catppuccin-nix",
+        "rev": "5ea62037843061d77c27a772f99b86359c9b89b1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "abhinandh-s",
+        "repo": "catppuccin-nix",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -48,8 +63,8 @@
         ]
       },
       "locked": {
-        "lastModified": 1770821213,
-        "narHash": "sha256-7Ryjb15PSWomP/JmeZHW8h0pWZBPq/3irj+JdzCYMV4=",
+        "lastModified": 1771057587,
+        "narHash": "sha256-zbBpYv2cZf1WMvUUHtsMAnj+565cFsyJQswUQTS+acw=",
         "path": "/home/abhi/git/nix-scripts",
         "type": "path"
       },
@@ -76,13 +91,15 @@
     },
     "root": {
       "inputs": {
+        "catppuccin": "catppuccin",
         "home-manager": "home-manager",
         "nix-fonts": "nix-fonts",
         "nix-scripts": "nix-scripts",
         "nixpkgs": "nixpkgs",
         "rust-overlay": "rust-overlay",
         "sops-nix": "sops-nix",
-        "unstable-nixpkgs": "unstable-nixpkgs"
+        "unstable-nixpkgs": "unstable-nixpkgs",
+        "wasm-pack": "wasm-pack"
       }
     },
     "rust-overlay": {
@@ -139,6 +156,23 @@
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
+      }
+    },
+    "wasm-pack": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1771315817,
+        "narHash": "sha256-eUsOFlINodkUh2ERfqdo938YUChtUeVZSSixuq2nEHo=",
+        "path": "/home/abhi/projects/wasm-pack-flake",
+        "type": "path"
+      },
+      "original": {
+        "path": "/home/abhi/projects/wasm-pack-flake",
+        "type": "path"
       }
     }
   },
