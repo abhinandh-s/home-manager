@@ -1,4 +1,4 @@
-{ config, pkgs, userSettings, lib, ... }:
+{ pkgs, userSettings, ... }:
 
 {
   home.username = "abhi";
@@ -27,7 +27,7 @@
       picom
       sops
       age
-      neovim
+      unstable.neovim
    # (slstatus.override {
    #   conf = builtins.readFile ./dots/slstatus/config.h;
    # })

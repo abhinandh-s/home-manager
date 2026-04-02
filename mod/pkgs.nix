@@ -3,6 +3,7 @@ dev_pkgs = with pkgs; [
   unstable.tailwindcss_4
   unstable.tailwindcss-language-server
   cargo-watch
+  cargo-tarpaulin
   deno
   lua-language-server
   nixd

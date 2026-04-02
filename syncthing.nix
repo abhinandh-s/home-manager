@@ -26,6 +26,16 @@
           "abhiRedmi" = { id = "L6XCKGO-E3DYD6U-N7KERVC-KYW7ALB-KSO5L36-OHYAJ7D-RJMEKRT-B46MAQS"; };
         };
         folders = {
+          "projects" = {         # Name of folder in Syncthing, also the folder ID
+            enable = true;
+            path = "/home/abhi/docs/projects";    
+            devices = [ "abhiRedmi" ];
+            ignorePerms = false;  # By default, Syncthing doesn't sync file permissions. This line enables it for this folder.
+            versioning = {
+              type = "trashcan";
+              params.cleanoutDays = "365";
+            };
+          };
           # "docs" = {         # Name of folder in Syncthing, also the folder ID
           #   enable = true;
           #   path = "/home/abhi/docs";    
