@@ -31,11 +31,16 @@ in  {
     packages = with pkgs; [
       telegram-desktop
         brave
+        fd
         librewolf
         libreoffice-fresh
         evince
         kdePackages.gwenview
         zoxide
+        pandoc
+        nemo-with-extensions
+        vlc
+        mpv
         typst
 
 

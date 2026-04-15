@@ -27,7 +27,7 @@
       picom
       sops
       age
-      unstable.neovim
+     # unstable.neovim
    # (slstatus.override {
    #   conf = builtins.readFile ./dots/slstatus/config.h;
    # })
